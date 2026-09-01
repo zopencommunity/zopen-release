@@ -1,0 +1,7 @@
+[zopen]
+name=zopen
+baseurl=http://163.74.83.190:8080/pulp/content/zopen/
+gpgkey=http://163.74.83.190:8080/pulp/content/keys/zopen.pub
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1

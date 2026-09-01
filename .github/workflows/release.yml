@@ -1,0 +1,10 @@
+name: Release and Publish
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  release:
+    uses: zopencommunity/meta/.github/workflows/rpm_release.yml@main
+    secrets: inherit

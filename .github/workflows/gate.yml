@@ -1,0 +1,8 @@
+name: PR Build Gate
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+jobs:
+  test:
+    uses: zopencommunity/meta/.github/workflows/rpm_build_and_test.yml@main
+    secrets: inherit
