@@ -1,6 +1,6 @@
 Name:           zopen-release
 Version:        1.0
-Release:        %(date "+%s")%{?dist}
+Release:        1%{?dist}
 Summary:        zopen repository and DNF configuration for /opt/pkg
 License:        Apache-2.0
 BuildArch:      noarch
@@ -34,13 +34,13 @@ mkdir -p %{buildroot}/opt/pkg/etc/rpm
 mkdir -p %{buildroot}/opt/pkg/var/lib/rpm
 mkdir -p %{buildroot}/opt/pkg/var/cache/libdnf5
 mkdir -p %{buildroot}/opt/pkg/var/log
+
 install -m 0644 %{SOURCE0} %{buildroot}/opt/pkg/etc/yum.repos.d/zopen.repo
 install -m 0644 %{SOURCE1} %{buildroot}/opt/pkg/etc/dnf/dnf.conf
 
 %files
 %config(noreplace) /opt/pkg/etc/yum.repos.d/zopen.repo
 %config(noreplace) /opt/pkg/etc/dnf/dnf.conf
-
 %dir /opt/pkg
 %dir /opt/pkg/bin
 %dir /opt/pkg/sbin
@@ -58,3 +58,4 @@ install -m 0644 %{SOURCE1} %{buildroot}/opt/pkg/etc/dnf/dnf.conf
 %dir /opt/pkg/var/cache
 %dir /opt/pkg/var/cache/libdnf5
 %dir /opt/pkg/var/log
+
