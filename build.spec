@@ -1,6 +1,6 @@
 Name:           zopen-release
 Version:        1.0
-Release:        %(date "+%s")%{?dist}
+Release:        1%{?dist}
 Summary:        zopen repository and DNF configuration for /opt/pkg
 License:        Apache-2.0
 BuildArch:      noarch
