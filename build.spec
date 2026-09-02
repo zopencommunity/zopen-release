@@ -1,4 +1,3 @@
-%global _sourcedir %{_specdir}
 Name:           zopen-release
 Version:        1.0
 Release:        %(date "+%s")%{?dist}
